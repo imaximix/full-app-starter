@@ -5,10 +5,10 @@
 
 (def system nil)
 
-(defn make-system []
-  {:handler app})
+;; (defn make-system []
+;;   {:handler app})
 
-(defn start [system]
+(defn start []
   (alter-var-root #'system (fn [system]
                              {:server (run-jetty app {:port 3000
                                                       :join? false})})))

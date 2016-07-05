@@ -12,6 +12,8 @@
     (main/info "Generating fresh 'lein new' full-app-starter project.")
     (->files data
              ["src/clj/{{sanitized}}/core.clj" (render "src/clj/core.clj" data)]
+             ["src/clj/{{sanitized}}/middleware/ssr.clj"
+              (render "src/clj/middleware/ssr.clj" data)]
 
              ["resources/public/index.html" (render "resources/public/index.html" data)]
              ["src/cljs/{{sanitized}}/core.cljs" (render "src/cljs/core.cljs" data)]
